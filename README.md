@@ -1,8 +1,14 @@
 
 # bank-account-reputation-performance-tests
 
-This is a placeholder README.md for a new repository
+### Smoke test
 
-### License
+It might be useful to try the journey with one user to check that everything works fine before running the full performance test
+```
+sbt -Dperftest.runSmokeTest=true -DrunLocal=true gatling:test
+```
 
-This code is open source software licensed under the [Apache 2.0 License]("http://www.apache.org/licenses/LICENSE-2.0.html").
+### Run the performance test
+```
+sbt gatling:test
+```
