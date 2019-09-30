@@ -24,6 +24,7 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
       .formParam("sortCode", "${sortCode}")
       .formParam("accountNumber", "71201948")
       .check(status.is(200))
-      .check(substring("BARCLAYS BANK PLC"))
+      .check(substring("${sortCode}"))
+      .check(substring("71201948"))
   }
 }
