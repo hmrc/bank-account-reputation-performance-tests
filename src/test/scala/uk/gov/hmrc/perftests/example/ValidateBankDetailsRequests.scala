@@ -1,13 +1,12 @@
 package uk.gov.hmrc.perftests.example
 
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
-
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
 object ValidateBankDetailsRequests extends ServicesConfiguration {
 
-  val baseUrl = baseUrlFor("bank-account-reputation-frontend")
+  val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
 
   val navigateToHomePage =
