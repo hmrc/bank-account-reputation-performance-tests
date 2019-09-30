@@ -8,6 +8,7 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
+  val sortCodesFeeder = csv("data/allSortCodes.csv")
 
   val navigateToHomePage =
     http("Navigate to Home Page")
@@ -20,7 +21,7 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
     http("Submit sort code and account number")
       .post(s"$baseUrl/validateBankDetails": String)
       .formParam("csrfToken", "${csrfToken}")
-      .formParam("sortCode", "200423")
+      .formParam("sortCode", "${sortCode}")
       .formParam("accountNumber", "71201948")
       .check(status.is(200))
       .check(substring("BARCLAYS BANK PLC"))
