@@ -1,4 +1,4 @@
-package uk.gov.hmrc.perftests.example
+package uk.gov.hmrc.bars
 
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
 import io.gatling.core.Predef._
