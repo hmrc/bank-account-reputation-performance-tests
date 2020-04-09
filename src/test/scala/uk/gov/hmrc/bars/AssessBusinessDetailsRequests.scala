@@ -19,7 +19,7 @@ object AssessBusinessDetailsRequests extends ServicesConfiguration {
                           |    "accountNumber": "${accountno}"
                           |  },
                           |  "business": {
-                          |    "tradingName": "${name}",
+                          |    "companyName": "${name}",
                           |    "companyRegistrationNumber": "UK27318156",
                           |    "address": {
                           |      "lines": ["22303 Darwin Turnpike"],
