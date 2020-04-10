@@ -5,26 +5,28 @@ import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
-object AssessBusinessDetailsRequests extends ServicesConfiguration {
+object AssessIndividualDetailsRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation")}/bank-account-reputation"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
 
-  val assessBusinessBankDetails: HttpRequestBuilder = {
+  val assessIndividualBankDetails: HttpRequestBuilder = {
     http("Submit sort code, account number, name and post code")
-      .post(s"$baseUrl/business/v1/assess": String)
+      .post(s"$baseUrl/personal/v2/assess": String)
       .header("Content-Type", "application/json")
       .body(StringBody(
         """|{
            |  "account": {
-           |    "sortCode": "${sortcode}",
-           |    "accountNumber": "${accountno}"
+           |    "sortCode": "${sortCode}",
+           |    "accountNumber": "${accountNumber}"
            |  },
-           |  "business": {
-           |    "companyName": "${name}",
-           |    "companyRegistrationNumber": "UK27318156",
+           |  "subject": {
+           |    "name": "${title} ${firstname} ${surname}",
            |    "address": {
-           |      "lines": ["22303 Darwin Turnpike"],
+           |      "lines": [
+           |      "${flatNumber}${streetNumber} ${street}",
+           |      "${town}"
+           |      ],
            |      "postcode": "${postcode}"
            |    }
            |  }

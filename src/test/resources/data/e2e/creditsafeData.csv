@@ -1,5 +1,5 @@
 sortcode,accountno,name,postcode,csresult,accountexists
-130605,00105897,Rice Bradtke and Bauch,KZ37 6KB,none,yes
+130605,00105897,Rice Bradtke and Bauch,KZ37 6KB,none,no
 550920,01076832,Howell - McDermott,PX8 8ZE,exact,yes
 957924,00171467,Graham Inc,TH9 9SS,exact,yes
 468201,00179642,Schmeler and Sons,FN42 7HX,exact,yes
@@ -12,7 +12,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 329325,00547662,Wisozk - Stroman,UK2 5RD,exact,yes
 887131,00816649,Olson Inc,XY3 0BB,exact,yes
 496916,00964724,Waelchi Stroman and Hermann,JY8 5XE,exact,yes
-523421,00967116,Cassin - Wolf,UT0 9QF,exact,yes
 413426,01117042,Osinski - Hoppe,YR01 8SN,exact,yes
 464542,01147585,McLaughlin Group,RZ0 2ZL,exact,yes
 663820,01243602,Abbott Mills and Sauer,RU88 4II,exact,yes
@@ -193,7 +192,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 272479,17183716,Bauch Inc,MP0 6YH,exact,yes
 117987,17432915,Barton - VonRueden,OW4 0SC,exact,no
 339989,18074921,Prohaska LLC,XA5 9CP,exact,yes
-0458,18246962,Donnelly Brakus and King,HR27 3SG,none,no
 027637,18351209,Lubowitz Group,TV43 0CE,exact,yes
 150367,18385526,Champlin - Lockman,FZ72 2YA,exact,no
 600224,18536070,Corkery - Renner,TX84 3WJ,exact,no
@@ -408,7 +406,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 227716,39559797,Ebert and Sons,HC06 7MH,exact,yes
 047277,39694290,Kassulke LLC,CY2 8RX,exact,yes
 428864,40098206,Glover Hermiston and Fritsch,ST8 7FF,exact,yes
-02540,40122015,Zieme and Sons,NF42 9MD,none,no
 349092,40125716,Harber LLC,VW31 1HS,exact,yes
 373191,40631421,Stamm and Sons,IX71 9UX,exact,yes
 682600,40846226,Wunsch - Cremin,WI02 6LW,exact,yes
@@ -531,7 +528,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 850310,51201792,Jerde - Dooley,SB7 6IP,exact,yes
 645621,51246360,Wintheiser Group,UM97 3CF,exact,yes
 219740,51390413,Parker - Grady,TY5 1CX,exact,yes
-01110,51513997,Shields and Sons,ES3 6PN,none,no
 031387,51670695,Cummerata - Roberts,HB80 5SK,exact,yes
 229279,51683411,Hilpert LLC,VJ59 4LN,exact,yes
 073617,51752223,DuBuque Johnson and Aufderhar,WB87 2JD,exact,yes
@@ -591,7 +587,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 635803,58486177,Kohler Hudson and Schuster,WB03 7CQ,exact,yes
 627677,58551320,Stehr - Yundt,JK67 4VF,exact,yes
 713854,58658568,Volkman - Hodkiewicz,EX6 0FN,exact,yes
-0178,58673966,Zieme Inc,RE9 6QO,none,no
 703404,58752825,Yost Inc,CP07 0US,exact,yes
 762215,58865303,Murray - Kautzer,AX96 4FD,exact,yes
 178272,58986637,Schmidt Blick and Wiegand,QC82 2LE,exact,yes
@@ -668,7 +663,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 556622,65934938,Mayer - Roberts,YC6 3CL,exact,yes
 723780,66092221,Hodkiewicz - Ritchie,NO74 8TI,exact,yes
 771741,66146934,Batz Inc,RJ3 3YZ,exact,no
-328482,66405184,Boyle Inc,PB8 4PS,exact,yes
 374776,66533766,Roberts - Renner,EL3 5IO,exact,yes
 295568,66607744,Wisoky Satterfield and Kirlin,VT6 7JL,exact,yes
 868437,66730663,Mante Inc,ZI7 8XB,exact,yes
@@ -746,7 +740,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 947927,73959457,Hackett - Deckow,BU2 2PK,exact,yes
 632183,74166656,Leffler Thompson and Bosco,JB2 4XB,exact,yes
 908541,74197939,Goodwin - Daniel,FF42 7LA,exact,no
-04122,74299523,Considine Gislason and Murray,EQ18 6QZ,none,no
 581830,74416943,Jerde McLaughlin and Kuvalis,CT45 1WU,exact,yes
 257571,74555669,Wiegand Conn and Thompson,UO03 2JB,exact,yes
 452828,74612522,Graham Walker and Cronin,CA8 3OZ,exact,yes
@@ -809,7 +802,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 938215,80776122,Anderson - Tromp,LL7 4TU,exact,no
 159641,80849642,Heathcote - Roberts,RV56 6CE,exact,yes
 292489,80880843,Considine Borer and Towne,UP0 7JC,exact,yes
-07457,80881872,Jacobi LLC,KQ8 9NG,none,no
 556338,80922385,Satterfield Crona and Bosco,GE96 4KS,exact,no
 035694,80954699,Yost LLC,RT98 7SA,exact,yes
 497832,81061821,Barton Blanda and Bradtke,GY63 2XQ,exact,yes
@@ -867,7 +859,6 @@ sortcode,accountno,name,postcode,csresult,accountexists
 850482,87411601,MacGyver LLC,RA5 6KC,exact,yes
 991682,87663158,Schowalter Group,TP6 0RW,exact,yes
 245211,87718808,Mraz Wyman and Dooley,NN0 3LT,exact,yes
-08858,87833906,Waters LLC,AG72 3ZA,none,no
 623462,87866309,Kessler - Turcotte,IZ76 2EX,exact,yes
 293125,87938116,Blanda Kiehn and Labadie,ZN7 6EV,exact,yes
 121156,88116215,Block Inc,IJ05 6PT,exact,no
@@ -879,11 +870,9 @@ sortcode,accountno,name,postcode,csresult,accountexists
 553900,88328430,Keebler Goldner and Stoltenberg,UW44 6HQ,exact,yes
 700257,88418872,Pfeffer - Brown,ZB8 5ZT,exact,yes
 906969,88503259,Spencer LLC,WU50 9CQ,exact,no
-01072,88504969,Batz Rodriguez and Walker,GC27 5YU,none,no
 908766,88714442,Kihn McKenzie and Gibson,HY50 3TJ,exact,no
 920204,88778324,Fadel LLC,NP6 7XI,exact,yes
 596046,88793345,Morar LLC,JQ4 9ZF,exact,yes
-07058,88876736,Grady Inc,YX3 3DV,none,no
 251918,88958568,Weimann Group,IJ00 0RD,exact,yes
 350429,89053414,Dickens Conn and Torp,YO42 9PB,exact,yes
 607693,89170472,Vandervort - Hand,HI00 2XL,exact,no

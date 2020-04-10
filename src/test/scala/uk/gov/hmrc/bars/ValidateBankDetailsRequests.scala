@@ -1,23 +1,23 @@
 package uk.gov.hmrc.bars
 
-import uk.gov.hmrc.performance.conf.ServicesConfiguration
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+import io.gatling.http.request.builder.HttpRequestBuilder
+import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
 object ValidateBankDetailsRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
-  val sortCodesFeeder = csv("data/allSortCodes.csv")
 
-  val navigateToHomePage =
+  val navigateToHomePage: HttpRequestBuilder =
     http("Navigate to Home Page")
       .get(s"$baseUrl/")
       .check(regex(_ => csrfPattern).saveAs("csrfToken"))
       .check(status.is(200))
 
 
-  val validateBankDetails = {
+  val validateBankDetails: HttpRequestBuilder = {
     http("Submit sort code and account number")
       .post(s"$baseUrl/validateBankDetails": String)
       .formParam("csrfToken", "${csrfToken}")
