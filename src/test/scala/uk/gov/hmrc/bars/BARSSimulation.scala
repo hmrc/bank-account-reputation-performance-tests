@@ -7,9 +7,9 @@ import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 
 class BARSSimulation extends PerformanceTestRunner {
 
-  setup("validate", "Validate Bank Details") withRequests(navigateToHomePage, validateBankDetails)
-  setup("business-assess", "Assess business details") withRequests (assessBusinessBankDetails)
-  setup("individual-assess", "Assess individual details") withRequests (assessIndividualBankDetails)
+  setup("validate-bank-details", "Validate Bank Details") withRequests(navigateToHomePage, validateBankDetails)
+  setup("business-assess", "Assess business details") withRequests assessBusinessBankDetails
+  setup("individual-assess", "Assess individual details") withRequests assessIndividualBankDetails
 
   runSimulation()
 }
