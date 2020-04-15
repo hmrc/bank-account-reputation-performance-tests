@@ -32,7 +32,7 @@ object AssessIndividualDetailsRequests extends ServicesConfiguration {
            |  }
            |}
            |""".stripMargin)).asJSON
-      .check(substring(""""accountExists":"""))
+      .check(substring(""""accountExists":"${accountExists}""""))
       .check(status.is(200))
   }
 }
