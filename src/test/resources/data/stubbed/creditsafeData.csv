@@ -1,93 +1,41 @@
 sortcode,accountno,name,postcode,csresult,accountexists
 662031,26344696,Howell - McDermott,PX8 8ZE,exact,inapplicable
-309352,03270771,Gutmann Steuber and Collins,MU62 8ZL,exact,yes
-309352,03440952,Gusikowski - Parker,UF0 2FF,exact,yes
-309352,03879802,Upton Schneider and Romaguera,ON3 0WH,exact,yes
-309352,03901801,Kuvalis Hauck and Bradtke,TY9 6KX,exact,yes
-309352,03913613,Gerhold Inc,DM79 1NM,exact,yes
-309352,04046662,Jacobi LLC,RV61 3KX,exact,yes
-309352,04097662,Marks - Turcotte,ML58 3PP,exact,yes
-309352,04199310,Beatty LLC,MD01 7HW,exact,yes
-309352,04409370,Hand and Sons,VC6 5ZN,exact,yes
-309352,04415722,Muller - Ratke,IA6 7LF,exact,yes
-309352,04429533,Hilpert Schuppe and Gutmann,SX98 8ZH,exact,yes
-309352,04685106,Lemke - Mohr,AP60 6YU,exact,yes
-309352,04933665,Fahey - Wolf,XN7 4FS,exact,yes
-309352,04968493,Yost - Gutmann,KO8 4HQ,exact,yes
-309352,05140936,Kuvalis - Frami,RX83 5RW,exact,yes
-309352,05221669,Skiles - O'Kon,YV99 8VI,exact,yes
-309352,05382085,Ullrich Group,FL94 6OR,exact,yes
-309352,05837922,Willms LLC,ON33 6KY,exact,yes
-309352,05843570,Steuber - Kutch,GJ7 2NQ,exact,yes
-309352,05926271,Parisian Blick and Fisher,SS90 1UC,exact,yes
-308776,06008785,Huel - Lowe,LZ84 4PZ,exact,yes
-308776,06027910,Feest LLC,HX8 9JT,exact,yes
-308776,06074760,Bayer and Sons,FB68 9IW,exact,yes
-308776,06144503,Zulauf Schaden and Trantow,JX00 1YE,exact,yes
-308776,06249541,Bayer Huel and Powlowski,XI55 4BL,exact,yes
-308776,06262804,Hackett Walter and Kuvalis,XB7 9CU,exact,yes
-308776,06263569,Sipes - Schoen,RU8 9CW,exact,yes
-308776,06701004,Johnston Inc,HM7 8FP,exact,yes
-308776,06720714,Bartell - Walsh,HB36 2LZ,exact,yes
-308776,07008699,Herman Inc,TO06 6PP,exact,yes
-308776,07043879,Graham - Renner,OJ45 2ES,exact,yes
-308776,07097951,Howell - Padberg,KC57 0EG,exact,yes
-308776,07203370,O'Kon Koelpin and Dicki,OS1 5MU,exact,yes
-308776,07261616,Marks Kshlerin and Lang,MY7 8IT,exact,yes
-308776,07292734,Boyer Group,AH6 5FI,exact,yes
-308776,07591721,Schmitt - Morar,QT27 6JP,exact,yes
-308776,07624117,Romaguera and Sons,VQ2 0QU,exact,yes
-308776,07625998,Breitenberg - Zulauf,OK59 8JQ,exact,yes
-308776,07649654,Farrell Inc,CT18 4NQ,exact,yes
-308776,07653137,Adams - Gutmann,VJ84 4NJ,exact,yes
-308776,07826521,VonRueden Rau and Gibson,BD60 4ME,exact,yes
-308776,08182091,Auer Halvorson and Johns,WW32 8CC,exact,yes
-308776,08338484,Yost - Brekke,PY5 3AC,exact,yes
-308776,08794192,Kovacek - Hickle,XH76 4PE,exact,yes
-308776,08928509,Zieme Mueller and Kirlin,VZ74 5MM,exact,yes
-306027,09011267,Ondricka Inc,VC2 8HO,exact,yes
-306027,09247590,Rodriguez - Hills,BH3 2CT,exact,yes
-306027,09314617,Boyle Group,AM8 2WJ,exact,yes
-306027,09400562,Cronin - Stracke,AC90 0DJ,exact,yes
-306027,09550301,Mitchell LLC,ZD10 3QC,exact,yes
-306027,09915918,Kautzer - Kerluke,NR3 9KX,exact,yes
-306027,09982166,Langworth Group,NO62 5MK,exact,yes
-306027,10044853,Pollich McLaughlin and Mueller,OS49 8OP,exact,yes
-306027,10076276,Ziemann LLC,GE30 3MA,exact,yes
-306027,10140712,Strosin Nitzsche and Effertz,NM01 6WR,exact,yes
-306027,10175421,Hudson - Lueilwitz,TH00 7QY,exact,yes
-306027,10258051,Rutherford and Sons,GH9 3BA,exact,yes
-306027,10411382,Senger Windler and Willms,DJ0 0UN,exact,yes
-306027,10500641,Kozey Group,UQ83 6OF,exact,yes
-306027,10532396,Lind - Goldner,JQ53 7MZ,exact,yes
-306027,10775735,Gottlieb and Sons,DW45 3VO,exact,yes
-306027,10825835,Funk LLC,SI94 1DV,exact,yes
-306027,10907427,Blanda and Sons,RW29 8TC,exact,yes
-306027,10962195,Boyle Group,UN4 2MA,exact,yes
-306027,11130934,Berge Green and DuBuque,FR44 0FP,exact,yes
-306027,11211717,Wehner - Hettinger,IV04 6CI,exact,yes
-306027,11343710,Krajcik LLC,NV6 6ML,exact,yes
-306027,11361389,Lindgren Inc,LD7 3MN,exact,yes
-306027,11441965,Conroy - Hegmann,AA5 5NA,exact,yes
-306027,11517129,Cummings and Sons,YJ9 1YV,exact,yes
-306027,11800132,Wiza Inc,WM58 6MP,exact,yes
-306027,11800899,Haley LLC,YI25 1HF,exact,yes
-306027,11892960,Cronin Pfeffer and Lehner,OI75 1EE,exact,yes
-306027,11929398,Hessel - Smitham,HE2 4SS,exact,yes
-306027,12014452,Funk Weissnat and Macejkovic,LD00 7CZ,exact,yes
-306027,12256399,Gaylord and Sons,PD87 0MR,exact,yes
-306027,12815930,Fay - Crist,LH85 1IY,exact,yes
-306027,12856450,Jacobson Krajcik and Rosenbaum,SU9 3JU,exact,yes
-306027,12981400,Okuneva and Sons,GX2 8AX,exact,yes
-306027,12989539,Robel LLC,KF42 7VC,exact,yes
-306027,13309256,O'Keefe O'Hara and Swift,ZC16 3HO,exact,yes
-306027,14671263,Effertz - Hahn,NW0 5RZ,exact,yes
-306027,14736900,Kling Effertz and Erdman,XK34 5VP,exact,yes
-306027,14771344,Quigley and Sons,DV5 6YY,exact,yes
-306027,14787315,Stehr West and Cronin,UJ90 4XC,exact,yes
-306027,14797053,McKenzie Group,LY2 1GI,exact,yes
-306027,14816214,Pfeffer - Franecki,TA2 0QP,exact,yes
-306027,14903267,Flatley Keebler and Hirthe,EC88 9XV,exact,yes
-306027,14985089,Jast - Hamill,NU4 2MC,exact,yes
-306027,15038823,Aufderhar - Hilpert,GP84 1BD,exact,yes
-306027,15050056,Ryan Boehm and Bins,AK59 2PE,exact,yes
+306027,10044853,Pollich McLaughlin and Mueller,OS49 8OP,exact,indeterminate
+306027,10076276,Ziemann LLC,GE30 3MA,exact,indeterminate
+306027,10140712,Strosin Nitzsche and Effertz,NM01 6WR,exact,indeterminate
+306027,10175421,Hudson - Lueilwitz,TH00 7QY,exact,indeterminate
+306027,10258051,Rutherford and Sons,GH9 3BA,exact,indeterminate
+306027,10411382,Senger Windler and Willms,DJ0 0UN,exact,indeterminate
+306027,10500641,Kozey Group,UQ83 6OF,exact,indeterminate
+306027,10532396,Lind - Goldner,JQ53 7MZ,exact,indeterminate
+306027,10775735,Gottlieb and Sons,DW45 3VO,exact,indeterminate
+306027,10825835,Funk LLC,SI94 1DV,exact,indeterminate
+306027,10907427,Blanda and Sons,RW29 8TC,exact,indeterminate
+306027,10962195,Boyle Group,UN4 2MA,exact,indeterminate
+306027,11130934,Berge Green and DuBuque,FR44 0FP,exact,indeterminate
+306027,11211717,Wehner - Hettinger,IV04 6CI,exact,indeterminate
+306027,11343710,Krajcik LLC,NV6 6ML,exact,indeterminate
+306027,11361389,Lindgren Inc,LD7 3MN,exact,indeterminate
+306027,11441965,Conroy - Hegmann,AA5 5NA,exact,indeterminate
+306027,11517129,Cummings and Sons,YJ9 1YV,exact,indeterminate
+306027,11800132,Wiza Inc,WM58 6MP,exact,indeterminate
+306027,11800899,Haley LLC,YI25 1HF,exact,indeterminate
+306027,11892960,Cronin Pfeffer and Lehner,OI75 1EE,exact,indeterminate
+306027,11929398,Hessel - Smitham,HE2 4SS,exact,indeterminate
+306027,12014452,Funk Weissnat and Macejkovic,LD00 7CZ,exact,indeterminate
+306027,12256399,Gaylord and Sons,PD87 0MR,exact,indeterminate
+306027,12815930,Fay - Crist,LH85 1IY,exact,indeterminate
+306027,12856450,Jacobson Krajcik and Rosenbaum,SU9 3JU,exact,indeterminate
+306027,12981400,Okuneva and Sons,GX2 8AX,exact,indeterminate
+306027,12989539,Robel LLC,KF42 7VC,exact,indeterminate
+306027,13309256,O'Keefe O'Hara and Swift,ZC16 3HO,exact,indeterminate
+306027,14671263,Effertz - Hahn,NW0 5RZ,exact,indeterminate
+306027,14736900,Kling Effertz and Erdman,XK34 5VP,exact,indeterminate
+306027,14771344,Quigley and Sons,DV5 6YY,exact,indeterminate
+306027,14787315,Stehr West and Cronin,UJ90 4XC,exact,indeterminate
+306027,14797053,McKenzie Group,LY2 1GI,exact,indeterminate
+306027,14816214,Pfeffer - Franecki,TA2 0QP,exact,indeterminate
+306027,14903267,Flatley Keebler and Hirthe,EC88 9XV,exact,indeterminate
+306027,14985089,Jast - Hamill,NU4 2MC,exact,indeterminate
+306027,15038823,Aufderhar - Hilpert,GP84 1BD,exact,indeterminate
+306027,15050056,Ryan Boehm and Bins,AK59 2PE,exact,indeterminate
