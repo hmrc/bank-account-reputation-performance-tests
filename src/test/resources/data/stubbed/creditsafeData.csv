@@ -1,41 +1,93 @@
 sortcode,accountno,name,postcode,csresult,accountexists
 662031,26344696,Howell - McDermott,PX8 8ZE,exact,inapplicable
-306027,10044853,Pollich McLaughlin and Mueller,OS49 8OP,exact,indeterminate
-306027,10076276,Ziemann LLC,GE30 3MA,exact,indeterminate
-306027,10140712,Strosin Nitzsche and Effertz,NM01 6WR,exact,indeterminate
-306027,10175421,Hudson - Lueilwitz,TH00 7QY,exact,indeterminate
-306027,10258051,Rutherford and Sons,GH9 3BA,exact,indeterminate
-306027,10411382,Senger Windler and Willms,DJ0 0UN,exact,indeterminate
-306027,10500641,Kozey Group,UQ83 6OF,exact,indeterminate
-306027,10532396,Lind - Goldner,JQ53 7MZ,exact,indeterminate
-306027,10775735,Gottlieb and Sons,DW45 3VO,exact,indeterminate
-306027,10825835,Funk LLC,SI94 1DV,exact,indeterminate
-306027,10907427,Blanda and Sons,RW29 8TC,exact,indeterminate
-306027,10962195,Boyle Group,UN4 2MA,exact,indeterminate
-306027,11130934,Berge Green and DuBuque,FR44 0FP,exact,indeterminate
-306027,11211717,Wehner - Hettinger,IV04 6CI,exact,indeterminate
-306027,11343710,Krajcik LLC,NV6 6ML,exact,indeterminate
-306027,11361389,Lindgren Inc,LD7 3MN,exact,indeterminate
-306027,11441965,Conroy - Hegmann,AA5 5NA,exact,indeterminate
-306027,11517129,Cummings and Sons,YJ9 1YV,exact,indeterminate
-306027,11800132,Wiza Inc,WM58 6MP,exact,indeterminate
-306027,11800899,Haley LLC,YI25 1HF,exact,indeterminate
-306027,11892960,Cronin Pfeffer and Lehner,OI75 1EE,exact,indeterminate
-306027,11929398,Hessel - Smitham,HE2 4SS,exact,indeterminate
-306027,12014452,Funk Weissnat and Macejkovic,LD00 7CZ,exact,indeterminate
-306027,12256399,Gaylord and Sons,PD87 0MR,exact,indeterminate
-306027,12815930,Fay - Crist,LH85 1IY,exact,indeterminate
-306027,12856450,Jacobson Krajcik and Rosenbaum,SU9 3JU,exact,indeterminate
-306027,12981400,Okuneva and Sons,GX2 8AX,exact,indeterminate
-306027,12989539,Robel LLC,KF42 7VC,exact,indeterminate
-306027,13309256,O'Keefe O'Hara and Swift,ZC16 3HO,exact,indeterminate
-306027,14671263,Effertz - Hahn,NW0 5RZ,exact,indeterminate
-306027,14736900,Kling Effertz and Erdman,XK34 5VP,exact,indeterminate
-306027,14771344,Quigley and Sons,DV5 6YY,exact,indeterminate
-306027,14787315,Stehr West and Cronin,UJ90 4XC,exact,indeterminate
-306027,14797053,McKenzie Group,LY2 1GI,exact,indeterminate
-306027,14816214,Pfeffer - Franecki,TA2 0QP,exact,indeterminate
-306027,14903267,Flatley Keebler and Hirthe,EC88 9XV,exact,indeterminate
-306027,14985089,Jast - Hamill,NU4 2MC,exact,indeterminate
-306027,15038823,Aufderhar - Hilpert,GP84 1BD,exact,indeterminate
-306027,15050056,Ryan Boehm and Bins,AK59 2PE,exact,indeterminate
+594528,03270775,Gutmann Steuber and Collins,MU62 8ZL,exact,inapplicable
+283813,03440951,Gusikowski - Parker,UF0 2FF,exact,inapplicable
+628813,03879807,Upton Schneider and Romaguera,ON3 0WH,exact,inapplicable
+619566,03901805,Kuvalis Hauck and Bradtke,TY9 6KX,exact,inapplicable
+047464,03913616,Gerhold Inc,DM79 1NM,exact,inapplicable
+782986,04046660,Jacobi LLC,RV61 3KX,exact,inapplicable
+184901,04097664,Marks - Turcotte,ML58 3PP,exact,inapplicable
+306190,04199315,Beatty LLC,MD01 7HW,exact,inapplicable
+767593,04409379,Hand and Sons,VC6 5ZN,exact,inapplicable
+448238,04415721,Muller - Ratke,IA6 7LF,exact,inapplicable
+069380,04429536,Hilpert Schuppe and Gutmann,SX98 8ZH,exact,inapplicable
+213284,04685104,Lemke - Mohr,AP60 6YU,exact,inapplicable
+590522,04933664,Fahey - Wolf,XN7 4FS,exact,inapplicable
+932492,04968499,Yost - Gutmann,KO8 4HQ,exact,inapplicable
+646720,05140935,Kuvalis - Frami,RX83 5RW,exact,inapplicable
+567824,05221663,Skiles - O'Kon,YV99 8VI,exact,inapplicable
+916500,05382082,Ullrich Group,FL94 6OR,exact,inapplicable
+478330,05837924,Willms LLC,ON33 6KY,exact,inapplicable
+172773,05843575,Steuber - Kutch,GJ7 2NQ,exact,inapplicable
+229021,05926278,Parisian Blick and Fisher,SS90 1UC,exact,inapplicable
+410557,06008787,Huel - Lowe,LZ84 4PZ,exact,inapplicable
+651204,06027912,Feest LLC,HX8 9JT,exact,inapplicable
+492033,06074769,Bayer and Sons,FB68 9IW,exact,inapplicable
+032069,06144503,Zulauf Schaden and Trantow,JX00 1YE,exact,inapplicable
+675107,06249541,Bayer Huel and Powlowski,XI55 4BL,exact,inapplicable
+197990,06262804,Hackett Walter and Kuvalis,XB7 9CU,exact,inapplicable
+928814,06263569,Sipes - Schoen,RU8 9CW,exact,inapplicable
+456052,06701004,Johnston Inc,HM7 8FP,exact,inapplicable
+583589,06720714,Bartell - Walsh,HB36 2LZ,exact,inapplicable
+846584,07008699,Herman Inc,TO06 6PP,exact,inapplicable
+283708,07043879,Graham - Renner,OJ45 2ES,exact,inapplicable
+842267,07097951,Howell - Padberg,KC57 0EG,exact,inapplicable
+243251,07203370,O'Kon Koelpin and Dicki,OS1 5MU,exact,inapplicable
+612143,07261616,Marks Kshlerin and Lang,MY7 8IT,exact,inapplicable
+351854,07292734,Boyer Group,AH6 5FI,exact,inapplicable
+076590,07591721,Schmitt - Morar,QT27 6JP,exact,inapplicable
+580033,07624117,Romaguera and Sons,VQ2 0QU,exact,inapplicable
+180516,07625998,Breitenberg - Zulauf,OK59 8JQ,exact,inapplicable
+358301,07649654,Farrell Inc,CT18 4NQ,exact,inapplicable
+881512,07653137,Adams - Gutmann,VJ84 4NJ,exact,inapplicable
+367338,07826521,VonRueden Rau and Gibson,BD60 4ME,exact,inapplicable
+311758,08182091,Auer Halvorson and Johns,WW32 8CC,exact,inapplicable
+842617,08338484,Yost - Brekke,PY5 3AC,exact,inapplicable
+411613,08794192,Kovacek - Hickle,XH76 4PE,exact,inapplicable
+466100,08928509,Zieme Mueller and Kirlin,VZ74 5MM,exact,inapplicable
+413090,09011267,Ondricka Inc,VC2 8HO,exact,inapplicable
+922710,09247590,Rodriguez - Hills,BH3 2CT,exact,inapplicable
+615941,09314617,Boyle Group,AM8 2WJ,exact,inapplicable
+344599,09400562,Cronin - Stracke,AC90 0DJ,exact,inapplicable
+913855,09550301,Mitchell LLC,ZD10 3QC,exact,inapplicable
+713565,09915918,Kautzer - Kerluke,NR3 9KX,exact,inapplicable
+568403,09982166,Langworth Group,NO62 5MK,exact,inapplicable
+569451,10044853,Pollich McLaughlin and Mueller,OS49 8OP,exact,inapplicable
+346870,10076276,Ziemann LLC,GE30 3MA,exact,inapplicable
+930030,10140712,Strosin Nitzsche and Effertz,NM01 6WR,exact,inapplicable
+396129,10175421,Hudson - Lueilwitz,TH00 7QY,exact,inapplicable
+478021,10258051,Rutherford and Sons,GH9 3BA,exact,inapplicable
+268056,10411382,Senger Windler and Willms,DJ0 0UN,exact,inapplicable
+682513,10500641,Kozey Group,UQ83 6OF,exact,inapplicable
+750032,10532396,Lind - Goldner,JQ53 7MZ,exact,inapplicable
+375952,10775735,Gottlieb and Sons,DW45 3VO,exact,inapplicable
+479353,10825835,Funk LLC,SI94 1DV,exact,inapplicable
+410202,10907427,Blanda and Sons,RW29 8TC,exact,inapplicable
+670791,10962195,Boyle Group,UN4 2MA,exact,inapplicable
+137390,11130934,Berge Green and DuBuque,FR44 0FP,exact,inapplicable
+388770,11211717,Wehner - Hettinger,IV04 6CI,exact,inapplicable
+927986,11343710,Krajcik LLC,NV6 6ML,exact,inapplicable
+358982,11361389,Lindgren Inc,LD7 3MN,exact,inapplicable
+889259,11441965,Conroy - Hegmann,AA5 5NA,exact,inapplicable
+942226,11517129,Cummings and Sons,YJ9 1YV,exact,inapplicable
+570613,11800132,Wiza Inc,WM58 6MP,exact,inapplicable
+047633,11800899,Haley LLC,YI25 1HF,exact,inapplicable
+415265,11892960,Cronin Pfeffer and Lehner,OI75 1EE,exact,inapplicable
+789557,11929398,Hessel - Smitham,HE2 4SS,exact,inapplicable
+018897,12014452,Funk Weissnat and Macejkovic,LD00 7CZ,exact,inapplicable
+016899,12256399,Gaylord and Sons,PD87 0MR,exact,inapplicable
+420999,12815930,Fay - Crist,LH85 1IY,exact,inapplicable
+698915,12856450,Jacobson Krajcik and Rosenbaum,SU9 3JU,exact,inapplicable
+127899,12981400,Okuneva and Sons,GX2 8AX,exact,inapplicable
+925226,12989539,Robel LLC,KF42 7VC,exact,inapplicable
+761744,13309256,O'Keefe O'Hara and Swift,ZC16 3HO,exact,inapplicable
+655002,14671263,Effertz - Hahn,NW0 5RZ,exact,inapplicable
+218218,14736900,Kling Effertz and Erdman,XK34 5VP,exact,inapplicable
+030723,14771344,Quigley and Sons,DV5 6YY,exact,inapplicable
+289989,14787315,Stehr West and Cronin,UJ90 4XC,exact,inapplicable
+131674,14797053,McKenzie Group,LY2 1GI,exact,inapplicable
+398913,14816214,Pfeffer - Franecki,TA2 0QP,exact,inapplicable
+792234,14903267,Flatley Keebler and Hirthe,EC88 9XV,exact,inapplicable
+650896,14985089,Jast - Hamill,NU4 2MC,exact,inapplicable
+310810,15038823,Aufderhar - Hilpert,GP84 1BD,exact,inapplicable
+035976,15050056,Ryan Boehm and Bins,AK59 2PE,exact,inapplicable
