@@ -19,7 +19,7 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
 
   val validateBankDetails: HttpRequestBuilder = {
     http("Submit sort code and account number")
-      .post(s"$baseUrl/validateBankDetails": String)
+      .post(s"$baseUrl/v2/validateBankDetails": String)
       .formParam("csrfToken", "${csrfToken}")
       .formParam("sortCode", "${sortCode}")
       .formParam("accountNumber", "71201948")
