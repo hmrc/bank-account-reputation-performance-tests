@@ -17,8 +17,8 @@ object AssessBusinessDetailsRequests extends ServicesConfiguration {
       .body(StringBody(
         """|{
            |  "account": {
-           |    "sortCode": "${sortcode}",
-           |    "accountNumber": "${accountno}"
+           |    "sortCode": "${sortCode}",
+           |    "accountNumber": "${accountNumber}"
            |  },
            |  "business": {
            |    "companyName": "${name}",
@@ -30,7 +30,7 @@ object AssessBusinessDetailsRequests extends ServicesConfiguration {
            |  }
            |}
            |""".stripMargin)).asJSON
-      .check(substring(""""accountExists":"${accountexists}""""))
+      .check(substring(""""accountExists":"${accountExists}""""))
       .check(status.is(200))
   }
 }
