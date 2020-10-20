@@ -2,14 +2,10 @@ import sbt._
 
 object Dependencies {
 
-  private val gatlingVersion = "2.2.5"
-
-  object Compile {
-    val typesafeConfig = "com.typesafe" % "config" % "1.3.1"
-    val performanceTestRunner = "uk.gov.hmrc" %% "performance-test-runner" % "3.1.0"
-    val gatlingTestFramework = "io.gatling" % "gatling-test-framework" % gatlingVersion
-    val gatlingHighCharts = "io.gatling.highcharts" % "gatling-charts-highcharts" % gatlingVersion
-  }
+  val test = Seq(
+    "com.typesafe" % "config" % "1.4.0" % Test,
+    "uk.gov.hmrc" %% "performance-test-runner" % "3.7.0" % Test,
+    "io.gatling" % "gatling-test-framework" % "2.3.1" % Test,
+    "io.gatling.highcharts" % "gatling-charts-highcharts" % "2.3.1" % Test
+  )
 }
-
-
