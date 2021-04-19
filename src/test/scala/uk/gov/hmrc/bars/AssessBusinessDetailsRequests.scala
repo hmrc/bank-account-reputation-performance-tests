@@ -23,7 +23,7 @@ import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
 object AssessBusinessDetailsRequests extends ServicesConfiguration {
 
-  val baseUrl = s"${baseUrlFor("bank-account-reputation")}/bank-account-reputation"
+  val baseUrl = s"${baseUrlFor("bank-account-reputation")}"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
 
   val assessBusinessBankDetails: HttpRequestBuilder = {
