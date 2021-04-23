@@ -29,7 +29,7 @@ object AssessBusinessDetailsRequests extends ServicesConfiguration {
   val assessBusinessBankDetails: HttpRequestBuilder = {
     http("Submit sort code, account number, name and post code")
       .post(s"$baseUrl/business/v2/assess": String)
-      .header("Content-Type", "application/json")
+      .header(HttpHeaderNames.ContentType, "application/json")
       .body(StringBody(
         """|{
            |  "account": {
