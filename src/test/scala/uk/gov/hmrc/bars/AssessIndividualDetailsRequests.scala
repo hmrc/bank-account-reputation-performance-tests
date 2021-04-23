@@ -47,7 +47,7 @@ object AssessIndividualDetailsRequests extends ServicesConfiguration {
            |    }
            |  }
            |}
-           |""".stripMargin)).asJSON
+           |""".stripMargin)).asJson
       .check(jsonPath("$.accountExists").is("${accountExists}"))
       .check(status.is(200))
   }
