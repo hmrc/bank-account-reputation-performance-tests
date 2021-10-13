@@ -21,26 +21,31 @@ import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
-object ValidateBankDetailsRequests extends ServicesConfiguration {
+object VerifyBusinessDetailsRequests extends ServicesConfiguration {
 
-  val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
+  val baseUrl = s"${baseUrlFor("bank-account-reputation")}"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
 
-  val navigateToHomePage: HttpRequestBuilder =
-    http("Navigate to Home Page")
-      .get(s"$baseUrl/")
-      .check(regex(_ => csrfPattern).saveAs("csrfToken"))
+  val verifyBusinessBankDetails: HttpRequestBuilder = {
+    http("Submit sort code, account number, name and post code")
+      .post(s"$baseUrl/verify/business": String)
+      .header(HttpHeaderNames.ContentType, "application/json")
+      .body(StringBody(
+        """|{
+           |  "account": {
+           |    "sortCode": "${sortCode}",
+           |    "accountNumber": "${accountNumber}"
+           |  },
+           |  "business": {
+           |    "companyName": "${name}",
+           |    "address": {
+           |      "lines": ["22303 Darwin Turnpike"],
+           |      "postcode": "${postcode}"
+           |    }
+           |  }
+           |}
+           |""".stripMargin)).asJson
+      .check(jsonPath("$.accountExists").is("${accountExists}"))
       .check(status.is(200))
-
-
-  val validateBankDetails: HttpRequestBuilder = {
-    http("Submit sort code and account number")
-      .post(s"$baseUrl/v2/validateBankDetails": String)
-      .formParam("csrfToken", "${csrfToken}")
-      .formParam("sortCode", "${sortCode}")
-      .formParam("accountNumber", "71201948")
-      .check(status.is(200))
-      .check(substring("${sortCode}"))
-      .check(substring("71201948"))
   }
 }
