@@ -21,6 +21,7 @@ import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
+@Deprecated
 object AssessIndividualDetailsRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation")}"

@@ -21,7 +21,8 @@ import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
-object ValidateBankDetailsRequests extends ServicesConfiguration {
+@Deprecated
+object ValidateBankDetailsRequestsV2 extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
@@ -33,9 +34,9 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
       .check(status.is(200))
 
 
-  val validateBankDetails: HttpRequestBuilder = {
+  val validateBankDetailsV2: HttpRequestBuilder = {
     http("Submit sort code and account number")
-      .post(s"$baseUrl/validate/bank-details": String)
+      .post(s"$baseUrl/v2/validateBankDetails": String)
       .formParam("csrfToken", "${csrfToken}")
       .formParam("sortCode", "${sortCode}")
       .formParam("accountNumber", "71201948")
