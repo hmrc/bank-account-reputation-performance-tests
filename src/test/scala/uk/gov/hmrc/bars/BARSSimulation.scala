@@ -18,18 +18,18 @@ package uk.gov.hmrc.bars
 
 import uk.gov.hmrc.bars.AssessBusinessDetailsRequests._
 import uk.gov.hmrc.bars.AssessIndividualDetailsRequests._
-import uk.gov.hmrc.bars.ValidateBankDetailsRequests.validateBankDetails
-import uk.gov.hmrc.bars.ValidateBankDetailsRequestsV2._
+import uk.gov.hmrc.bars.ValidateBankDetailsRequests._
 import uk.gov.hmrc.bars.VerifyBusinessDetailsRequests.verifyBusinessBankDetails
 import uk.gov.hmrc.bars.VerifyPersonalDetailsRequests.verifyPersonalBankDetails
+import uk.gov.hmrc.barsfe.ValidateBankDetailsFrontEndRequests._
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 
 class BARSSimulation extends PerformanceTestRunner {
 
-  setup("validate-bank-details-v2", "Validate Bank Details (Legacy)") withRequests(navigateToHomePage, validateBankDetailsV2)
+  setup("validate-bank-details-frontend", "Validate Bank Details (Frontend)") withRequests(navigateToHomePageFrontend, validateBankDetailsFrontend)
   setup("business-assess", "Assess business details") withRequests assessBusinessBankDetails
   setup("verify-business", "Verify business details") withRequests verifyBusinessBankDetails
-  setup("validate-bank-details", "Validate Bank Details") withRequests(navigateToHomePage, validateBankDetails)
+  setup("validate-bank-details", "Validate Bank Details") withRequests validateBankDetails
   setup("individual-assess", "Assess individual details") withRequests assessIndividualBankDetails
   setup("verify-personal", "Verify personal details") withRequests verifyPersonalBankDetails
 
