@@ -29,6 +29,7 @@ object VerifyPersonalDetailsRequests extends ServicesConfiguration {
   val verifyPersonalBankDetails: HttpRequestBuilder = {
     http("Submit sort code, account number, name and post code")
       .post(s"$baseUrl/verify/personal": String)
+      .header(HttpHeaderNames.UserAgent, "bavfe-performance-tests")
       .header(HttpHeaderNames.ContentType, "application/json")
       .body(StringBody(
         """|{
