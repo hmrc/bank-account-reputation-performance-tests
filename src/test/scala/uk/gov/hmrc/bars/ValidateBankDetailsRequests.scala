@@ -29,7 +29,7 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
   val validateBankDetails: HttpRequestBuilder = {
     http("Submit sort code and account number")
       .post(s"$baseUrl/validate/bank-details": String)
-      .header(HttpHeaderNames.UserAgent, "bavfe-performance-tests")
+      .header(HttpHeaderNames.UserAgent, "bars-performance-tests")
       .header(HttpHeaderNames.ContentType, "application/json")
       .body(StringBody(
         """|{

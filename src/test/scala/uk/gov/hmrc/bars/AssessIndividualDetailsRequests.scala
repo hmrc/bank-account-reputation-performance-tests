@@ -30,7 +30,7 @@ object AssessIndividualDetailsRequests extends ServicesConfiguration {
   val assessIndividualBankDetails: HttpRequestBuilder = {
     http("Submit sort code, account number, name and post code")
       .post(s"$baseUrl/personal/v3/assess": String)
-      .header(HttpHeaderNames.UserAgent, "bavfe-performance-tests")
+      .header(HttpHeaderNames.UserAgent, "bars-performance-tests")
       .header(HttpHeaderNames.ContentType, "application/json")
       .body(StringBody(
         """|{
