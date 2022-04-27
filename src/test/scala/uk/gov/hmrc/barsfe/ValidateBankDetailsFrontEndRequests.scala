@@ -7,7 +7,7 @@ import uk.gov.hmrc.performance.conf.ServicesConfiguration
 
 object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
-  val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
+  val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend/verify"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
 
   val navigateToHomePageFrontend: HttpRequestBuilder =
@@ -21,8 +21,10 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
     http("Submit sort code and account number")
       .post(s"$baseUrl/validateBankDetails": String)
       .formParam("csrfToken", "${csrfToken}")
-      .formParam("sortCode", "${sortCode}")
-      .formParam("accountNumber", "71201948")
+      .formParam("input.account.sortCode", "${sortCode}")
+      .formParam("input.account.accountNumber", "71201948")
+      .formParam("input.subject.name", "Fred Jones")
+      .formParam("input.account.accountType", "personal")
       .check(status.is(200))
       .check(substring("${sortCode}"))
       .check(substring("71201948"))
