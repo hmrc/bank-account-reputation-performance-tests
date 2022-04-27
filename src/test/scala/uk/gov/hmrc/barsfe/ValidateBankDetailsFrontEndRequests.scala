@@ -12,14 +12,14 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   val navigateToHomePageFrontend: HttpRequestBuilder =
     http("Navigate to Home Page")
-      .get(s"$baseUrl/")
+      .get(baseUrl)
       .check(regex(_ => csrfPattern).saveAs("csrfToken"))
       .check(status.is(200))
 
 
   val validateBankDetailsFrontend: HttpRequestBuilder = {
     http("Submit sort code and account number")
-      .post(s"$baseUrl/validateBankDetails": String)
+      .post(baseUrl)
       .formParam("csrfToken", "${csrfToken}")
       .formParam("input.account.sortCode", "${sortCode}")
       .formParam("input.account.accountNumber", "71201948")
