@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,13 @@ import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 
 class BARSSimulation extends PerformanceTestRunner {
 
-  setup("validate-bank-details-frontend", "Validate Bank Details (Frontend)") withRequests(navigateToHomePageFrontend, validateBankDetailsFrontend)
+  setup("validate-bank-details-frontend", "Validate Bank Details (Frontend)") withRequests(
+    navigateToHomePageFrontend,
+    getStrideLoginRedirect,
+    getStrideIdpStubPage,
+    strideSignIn,
+    postAuthResponse,
+    validateBankDetailsFrontend)
   setup("business-assess", "Assess business details") withRequests assessBusinessBankDetails
   setup("verify-business", "Verify business details") withRequests verifyBusinessBankDetails
   setup("validate-bank-details", "Validate Bank Details") withRequests validateBankDetails
