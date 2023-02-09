@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 HM Revenue & Customs
+ * Copyright 2023 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,17 +16,58 @@
 
 package uk.gov.hmrc.barsfe
 
+import java.net.URLDecoder
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.http.request.builder.HttpRequestBuilder
 import uk.gov.hmrc.performance.conf.ServicesConfiguration
+import io.gatling.http.HeaderNames.Location
+import uk.gov.hmrc.RequestUtils.{ escapeURLRegex, extractParam, redirectLocation }
 
 object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
+  val xssHeader = headerRegex("X-XSS-Protection", "1; mode=block")
+  val strideAuthLogin : String = baseUrlFor("stride-stub")
+  val strideAuthResponse : String = baseUrlFor("stride-auth")
 
-  val navigateToHomePageFrontend: HttpRequestBuilder =
+  def getStrideLoginRedirect: HttpRequestBuilder = {
+    http("get stride login redirect")
+      .get(s"$baseUrl/verify")
+      .check(status.is(303))
+      .check(header(Location).saveAs("strideStubRedirect"))
+  }
+
+  def getStrideIdpStubPage: HttpRequestBuilder = {
+    http("get stride IDP page")
+      .get("${strideStubRedirect}")
+      .check(status.is(303))
+  }
+
+  val strideSignIn: HttpRequestBuilder =
+    http("post /stride-idp-stub/sign-in")
+      .post(s"$strideAuthLogin/stride-idp-stub/sign-in")
+      .formParam("usersGivenName", "")
+      .formParam("usersSurname", "")
+      .formParam("pid", "pid")
+      .formParam("emailAddress", "")
+      .formParam("status", true)
+      .formParam("signature", "valid")
+      .formParam("roles", "")
+      .formParam("RelayState", s"successURL=s$baseUrl/verify")
+      .check(status.is(_ ⇒ 303))
+      .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
+
+  val postAuthResponse: HttpRequestBuilder =
+    http("post /stride/auth-response")
+      .post(s"$strideAuthResponse/stride/auth-response")
+      .formParam("SAMLResponse", s ⇒ URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
+      .formParam("RelayState", s"successURL=/help-to-save-stride/check-eligibility-page&failureURL=/stride/failure?continueURL=/help-to-save-stride/check-eligibility-page")
+      .check(status.is(303))
+      .check(xssHeader)
+
+  val navigateToBARSFrontendHomePage: HttpRequestBuilder =
     http("Navigate to Home Page")
       .get(s"$baseUrl/verify")
       .check(regex(_ => csrfPattern).saveAs("csrfToken"))
