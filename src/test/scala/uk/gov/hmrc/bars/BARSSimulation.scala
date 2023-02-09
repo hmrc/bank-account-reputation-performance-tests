@@ -27,11 +27,11 @@ import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 class BARSSimulation extends PerformanceTestRunner {
 
   setup("validate-bank-details-frontend", "Validate Bank Details (Frontend)") withRequests(
-    navigateToHomePageFrontend,
     getStrideLoginRedirect,
     getStrideIdpStubPage,
     strideSignIn,
     postAuthResponse,
+    navigateToBARSFrontendHomePage,
     validateBankDetailsFrontend)
   setup("business-assess", "Assess business details") withRequests assessBusinessBankDetails
   setup("verify-business", "Verify business details") withRequests verifyBusinessBankDetails
