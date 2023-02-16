@@ -41,7 +41,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   def getStrideIdpStubPage: HttpRequestBuilder = {
     http("get stride IDP page")
-      .get("${strideStubRedirect}")
+      .get(strideAuthLogin + "${strideStubRedirect}")
       .check(status.is(303))
   }
 
