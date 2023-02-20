@@ -16,11 +16,8 @@
 
 package uk.gov.hmrc
 
-
-import java.time.LocalDate
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import org.joda.time.LocalTime
 
 object RequestUtils {
   val csrfPattern = """name="csrfToken" value="([^"]+)""""
@@ -51,13 +48,13 @@ object RequestUtils {
   def extractParams(url: String): Map[String, String] = {
     val splitUrl = url.split('?').toList
     splitUrl match {
-      case _ :: params :: Nil ⇒
+      case _ :: params :: Nil =>
         val paramsList = params.split('&').toList
         paramsList.map(_.split('=').toList match {
-          case key :: value :: Nil ⇒ key → value
-          case _ ⇒ sys.error("")
+          case key :: value :: Nil => key → value
+          case _ => sys.error("")
         }).toMap
-      case _ ⇒ sys.error("")
+      case _ => sys.error("")
     }
   }
 }
