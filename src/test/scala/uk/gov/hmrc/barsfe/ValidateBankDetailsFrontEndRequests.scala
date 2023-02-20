@@ -56,13 +56,13 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
       .formParam("signature", "valid")
       .formParam("roles", "")
       .formParam("RelayState", s"successURL=s$baseUrl/verify")
-      .check(status.is(_ ⇒ 303))
+      .check(status.is(_ => 303))
       .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
 
   val postAuthResponse: HttpRequestBuilder =
     http("post /stride/auth-response")
       .post(s"$strideAuthResponse/stride/auth-response")
-      .formParam("SAMLResponse", s ⇒ URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
+      .formParam("SAMLResponse", s => URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
       .formParam("RelayState", s"successURL=/help-to-save-stride/check-eligibility-page&failureURL=/stride/failure?continueURL=/help-to-save-stride/check-eligibility-page")
       .check(status.is(303))
       .check(xssHeader)
