@@ -35,9 +35,9 @@ object RequestUtils {
   }
 
   def escapeURLRegex(url: String): String =
-    url.replaceAllLiterally("/", "\\/")
-      .replaceAllLiterally(".", "\\.")
-      .replaceAllLiterally("?", "\\?")
+    url.replace("/", "\\/")
+      .replace(".", "\\.")
+      .replace("?", "\\?")
 
   def redirectLocation(expectedRedirectLocationsRegex: String*) =
     headerRegex("Location", expectedRedirectLocationsRegex.mkString("|"))
@@ -51,7 +51,7 @@ object RequestUtils {
       case _ :: params :: Nil =>
         val paramsList = params.split('&').toList
         paramsList.map(_.split('=').toList match {
-          case key :: value :: Nil => key → value
+          case key :: value :: Nil => key -> value
           case _ => sys.error("")
         }).toMap
       case _ => sys.error("")
