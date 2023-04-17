@@ -1,7 +1,7 @@
 sortCode,accountNumber,name,postcode,accountExists
 "206705","86473611",British Airways Ltd,UB7 0GB,yes
 "207106","86473611",Security Engima,MD01 9UL,yes
-"206705","76523611",Vortex Solar,FI7 9SS,yes
+"206705","76523611",Vortex Solar,FI7 9SS,no
 "207106","44311677",Melvin Loper,RZ49 0RS,yes
-"207102","74597611",Yost - Osinski,FI7 9SS,indeterminate
+"207102","74597611",Yost - Osinski,FI7 9SS,yes
 "301658","06883600",Sporer - Sporer,OL02 6WX,indeterminate
