@@ -2,8 +2,7 @@ import sbt._
 
 object Dependencies {
 
-  val test = Seq(
-    "com.typesafe" % "config" % "1.4.1" % Test,
-    "uk.gov.hmrc" %% "performance-test-runner" % "6.1.0" % Test,
-  )
+  val test: Seq[ModuleID] = Seq(
+    "uk.gov.hmrc" %% "performance-test-runner" % "6.2.0"
+  ).map(_ % Test)
 }

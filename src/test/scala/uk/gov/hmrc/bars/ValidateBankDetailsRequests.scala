@@ -34,8 +34,8 @@ object ValidateBankDetailsRequests extends ServicesConfiguration {
       .body(StringBody(
         """|{
            |  "account": {
-           |    "sortCode": "${sortCode}",
-           |    "accountNumber": "${accountNumber}"
+           |    "sortCode": "#{sortCode}",
+           |    "accountNumber": "#{accountNumber}"
            |  }
            |}
            |""".stripMargin)).asJson

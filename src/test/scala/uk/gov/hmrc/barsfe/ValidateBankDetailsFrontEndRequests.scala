@@ -41,7 +41,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   def getStrideIdpStubPage: HttpRequestBuilder = {
     http("get stride IDP page")
-      .get(strideAuthLogin + "${strideStubRedirect}")
+      .get(strideAuthLogin + "#{strideStubRedirect}")
       .check(status.is(303))
   }
 
@@ -76,13 +76,13 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
   val validateBankDetailsFrontend: HttpRequestBuilder = {
     http("Submit sort code and account number")
       .post(s"$baseUrl/verify")
-      .formParam("csrfToken", "${csrfToken}")
-      .formParam("input.account.sortCode", "${sortCode}")
+      .formParam("csrfToken", "#{csrfToken}")
+      .formParam("input.account.sortCode", "#{sortCode}")
       .formParam("input.account.accountNumber", "71201948")
       .formParam("input.subject.name", "Fred Jones")
       .formParam("input.account.accountType", "personal")
       .check(status.is(200))
-      .check(substring("${sortCode}"))
+      .check(substring("#{sortCode}"))
       .check(substring("71201948"))
   }
 }
