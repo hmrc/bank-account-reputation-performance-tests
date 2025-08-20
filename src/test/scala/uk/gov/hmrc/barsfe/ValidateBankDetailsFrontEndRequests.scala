@@ -34,7 +34,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   def getStrideLoginRedirect: HttpRequestBuilder = {
     http("get stride login redirect")
-      .get(s"$baseUrl/verify")
+      .get(s"$baseUrl/secure")
       .check(status.is(303))
       .check(header(Location).saveAs("strideStubRedirect"))
   }
@@ -55,7 +55,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
       .formParam("status", true)
       .formParam("signature", "valid")
       .formParam("roles", "")
-      .formParam("RelayState", s"successURL=s$baseUrl/verify")
+      .formParam("RelayState", s"successURL=s$baseUrl/secure/verify")
       .check(status.is(_ => 303))
       .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
 
@@ -69,13 +69,13 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   val navigateToBARSFrontendHomePage: HttpRequestBuilder =
     http("Navigate to Home Page")
-      .get(s"$baseUrl/verify")
+      .get(s"$baseUrl/secure/verify")
       .check(regex(_ => csrfPattern).saveAs("csrfToken"))
       .check(status.is(200))
 
   val validateBankDetailsFrontend: HttpRequestBuilder = {
     http("Submit sort code and account number")
-      .post(s"$baseUrl/verify")
+      .post(s"$baseUrl/secure/verify")
       .formParam("csrfToken", "#{csrfToken}")
       .formParam("input.account.sortCode", "#{sortCode}")
       .formParam("input.account.accountNumber", "71201948")
