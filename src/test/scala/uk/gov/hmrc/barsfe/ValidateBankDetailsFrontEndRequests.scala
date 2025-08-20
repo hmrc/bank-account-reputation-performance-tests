@@ -54,8 +54,8 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
       .formParam("emailAddress", "")
       .formParam("status", true)
       .formParam("signature", "valid")
-      .formParam("roles", "")
-      .formParam("RelayState", s"successURL=s$baseUrl/secure/verify")
+      .formParam("roles", "bars_front_end_tool_user")
+      .formParam("RelayState", s"successURL=$baseUrl/secure/verify")
       .check(status.is(_ => 303))
       .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
 
@@ -63,7 +63,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
     http("post /stride/auth-response")
       .post(s"$strideAuthResponse/stride/auth-response")
       .formParam("SAMLResponse", s => URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
-      .formParam("RelayState", s"successURL=/help-to-save-stride/check-eligibility-page&failureURL=/stride/failure?continueURL=/help-to-save-stride/check-eligibility-page")
+      .formParam("RelayState", s"successURL=$baseUrl/secure/verify&failureURL=/stride/failure?continueURL=$baseUrl/secure/verify")
       .check(status.is(303))
       .check(xssHeader)
 
