@@ -34,7 +34,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   def getStrideLoginRedirect: HttpRequestBuilder = {
     http("get stride login redirect")
-      .get(s"$baseUrl/secure")
+      .get(s"$baseUrl/secure/")
       .check(status.is(303))
       .check(header(Location).saveAs("strideStubRedirect"))
   }
