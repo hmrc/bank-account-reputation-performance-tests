@@ -35,20 +35,20 @@ object AssessBusinessDetailsRequests extends ServicesConfiguration {
       .body(StringBody(
         """|{
            |  "account": {
-           |    "sortCode": "${sortCode}",
-           |    "accountNumber": "${accountNumber}"
+           |    "sortCode": "#{sortCode}",
+           |    "accountNumber": "#{accountNumber}"
            |  },
            |  "business": {
-           |    "companyName": "${name}",
+           |    "companyName": "#{name}",
            |    "companyRegistrationNumber": "UK27318156",
            |    "address": {
            |      "lines": ["22303 Darwin Turnpike"],
-           |      "postcode": "${postcode}"
+           |      "postcode": "#{postcode}"
            |    }
            |  }
            |}
            |""".stripMargin)).asJson
-      .check(jsonPath("$.accountExists").is("${accountExists}"))
+      .check(jsonPath("$.accountExists").is("#{accountExists}"))
       .check(status.is(200))
   }
 }

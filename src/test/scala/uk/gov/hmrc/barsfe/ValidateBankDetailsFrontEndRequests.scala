@@ -34,14 +34,14 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   def getStrideLoginRedirect: HttpRequestBuilder = {
     http("get stride login redirect")
-      .get(s"$baseUrl/verify")
+      .get(s"$baseUrl/secure/")
       .check(status.is(303))
       .check(header(Location).saveAs("strideStubRedirect"))
   }
 
   def getStrideIdpStubPage: HttpRequestBuilder = {
     http("get stride IDP page")
-      .get(strideAuthLogin + "${strideStubRedirect}")
+      .get(strideAuthLogin + "#{strideStubRedirect}")
       .check(status.is(303))
   }
 
@@ -54,8 +54,8 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
       .formParam("emailAddress", "")
       .formParam("status", true)
       .formParam("signature", "valid")
-      .formParam("roles", "")
-      .formParam("RelayState", s"successURL=s$baseUrl/verify")
+      .formParam("roles", "bars_front_end_tool_user")
+      .formParam("RelayState", s"successURL=$baseUrl/secure/verify")
       .check(status.is(_ => 303))
       .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
 
@@ -63,26 +63,26 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
     http("post /stride/auth-response")
       .post(s"$strideAuthResponse/stride/auth-response")
       .formParam("SAMLResponse", s => URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
-      .formParam("RelayState", s"successURL=/help-to-save-stride/check-eligibility-page&failureURL=/stride/failure?continueURL=/help-to-save-stride/check-eligibility-page")
+      .formParam("RelayState", s"successURL=$baseUrl/secure/verify&failureURL=/stride/failure?continueURL=$baseUrl/secure/verify")
       .check(status.is(303))
       .check(xssHeader)
 
   val navigateToBARSFrontendHomePage: HttpRequestBuilder =
     http("Navigate to Home Page")
-      .get(s"$baseUrl/verify")
+      .get(s"$baseUrl/secure/verify")
       .check(regex(_ => csrfPattern).saveAs("csrfToken"))
       .check(status.is(200))
 
   val validateBankDetailsFrontend: HttpRequestBuilder = {
     http("Submit sort code and account number")
-      .post(s"$baseUrl/verify")
-      .formParam("csrfToken", "${csrfToken}")
-      .formParam("input.account.sortCode", "${sortCode}")
+      .post(s"$baseUrl/secure/verify")
+      .formParam("csrfToken", "#{csrfToken}")
+      .formParam("input.account.sortCode", "#{sortCode}")
       .formParam("input.account.accountNumber", "71201948")
       .formParam("input.subject.name", "Fred Jones")
       .formParam("input.account.accountType", "personal")
       .check(status.is(200))
-      .check(substring("${sortCode}"))
+      .check(substring("#{sortCode}"))
       .check(substring("71201948"))
   }
 }

@@ -34,22 +34,22 @@ object VerifyPersonalDetailsRequests extends ServicesConfiguration {
       .body(StringBody(
         """|{
            |  "account": {
-           |    "sortCode": "${sortCode}",
-           |    "accountNumber": "${accountNumber}"
+           |    "sortCode": "#{sortCode}",
+           |    "accountNumber": "#{accountNumber}"
            |  },
            |  "subject": {
-           |    "name": "${title} ${firstname} ${surname}",
+           |    "name": "#{title} #{firstname} #{surname}",
            |    "address": {
            |      "lines": [
-           |      "${flatNumber}${streetNumber} ${street}",
-           |      "${town}"
+           |      "#{flatNumber}#{streetNumber} #{street}",
+           |      "#{town}"
            |      ],
-           |      "postcode": "${postcode}"
+           |      "postcode": "#{postcode}"
            |    }
            |  }
            |}
            |""".stripMargin)).asJson
-      .check(jsonPath("$.accountExists").is("${accountExists}"))
+      .check(jsonPath("$.accountExists").is("#{accountExists}"))
       .check(status.is(200))
   }
 }
