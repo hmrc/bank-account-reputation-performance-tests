@@ -27,6 +27,25 @@ The following configuration of journeys per second (JPS) results in around ~1000
 - BARS Individual Simulation: **5 JPS**,
 - BARS Validate Simulation: **15 JPS**
 
+Services
+If you don't have Mongo running locally, then startup via Docker container as follows:
+
+docker run --restart unless-stopped --name mongodb -p 27017:27017 -d percona/percona-server-mongodb:7.0 --replSet rs0
+docker exec -it mongodb mongosh --eval "rs.initiate();"
+
+If you don't have postgres installed locally you can run it in docker using the following command
+
+    docker run -d --rm --name postgresql -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 postgres:latest
+
+Start dependent microservices using the following shell script:
+
+./start_services.sh
+
+Smoke test
+Before raising a PR, ensure the smoke tests pass locally by running this script:
+
+./run_tests.sh
+
 ### Smoke test
 
 It might be useful to try the journey with one user to check that everything works fine before running the full performance test.
