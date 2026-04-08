@@ -37,3 +37,6 @@ sm2 --start BANK_ACCOUNT_REPUTATION_FRONTEND_SERVICES BANK_ACCOUNT_REPUTATION_TH
     "-Dauditing.enabled=false"
   ]
 }'
+
+curl -X POST http://localhost:9871/refresh/cache/eiscd
+curl -X POST http://localhost:9871/refresh/cache/modcheck
