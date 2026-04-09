@@ -27,6 +27,17 @@ The following configuration of journeys per second (JPS) results in around ~1000
 - BARS Individual Simulation: **5 JPS**,
 - BARS Validate Simulation: **15 JPS**
 
+Services
+
+Start dependent microservices using the following shell script:
+
+./start_services.sh
+
+Smoke test
+Before raising a PR, ensure the smoke tests pass locally by running this script:
+
+./run_tests.sh
+
 ### Smoke test
 
 It might be useful to try the journey with one user to check that everything works fine before running the full performance test.
