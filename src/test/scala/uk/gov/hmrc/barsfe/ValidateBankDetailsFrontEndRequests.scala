@@ -28,7 +28,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
 
   val baseUrl = s"${baseUrlFor("bank-account-reputation-frontend")}/bank-account-reputation-frontend"
   val csrfPattern = """<input type="hidden" name="csrfToken" value="([^"]+)""""
-  val xssHeader = headerRegex("X-XSS-Protection", "1; mode=block")
+  val xssHeader = headerRegex(StringBody("X-XSS-Protection"), StringBody("1; mode=block"))
   val strideAuthLogin : String = baseUrlFor("stride-stub")
   val strideAuthResponse : String = baseUrlFor("stride-auth")
 
@@ -48,14 +48,14 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
   val strideSignIn: HttpRequestBuilder =
     http("post /stride-idp-stub/sign-in")
       .post(s"$strideAuthLogin/stride-idp-stub/sign-in")
-      .formParam("usersGivenName", "")
-      .formParam("usersSurname", "")
-      .formParam("pid", "pid")
-      .formParam("emailAddress", "")
+      .formParam("usersGivenName", StringBody(""))
+      .formParam("usersSurname", StringBody(""))
+      .formParam("pid", StringBody("pid"))
+      .formParam("emailAddress", StringBody(""))
       .formParam("status", true)
-      .formParam("signature", "valid")
-      .formParam("roles", "bars_front_end_tool_user")
-      .formParam("RelayState", s"successURL=$baseUrl/secure/verify")
+      .formParam("signature", StringBody("valid"))
+      .formParam("roles", StringBody("bars_front_end_tool_user"))
+      .formParam("RelayState", StringBody(s"successURL=$baseUrl/secure/verify"))
       .check(status.is(_ => 303))
       .check(redirectLocation(s"${escapeURLRegex("/stride-idp-stub/redirect-to-stride")}.*").saveAs("confirm-sign-in-redirect"))
 
@@ -63,7 +63,7 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
     http("post /stride/auth-response")
       .post(s"$strideAuthResponse/stride/auth-response")
       .formParam("SAMLResponse", s => URLDecoder.decode(extractParam(s, "confirm-sign-in-redirect")("encodedSamlResponse"), "UTF-8"))
-      .formParam("RelayState", s"successURL=$baseUrl/secure/verify&failureURL=/stride/failure?continueURL=$baseUrl/secure/verify")
+      .formParam("RelayState", StringBody(s"successURL=$baseUrl/secure/verify&failureURL=/stride/failure?continueURL=$baseUrl/secure/verify"))
       .check(status.is(303))
       .check(xssHeader)
 
@@ -76,11 +76,11 @@ object ValidateBankDetailsFrontEndRequests extends ServicesConfiguration {
   val validateBankDetailsFrontend: HttpRequestBuilder = {
     http("Submit sort code and account number")
       .post(s"$baseUrl/secure/verify")
-      .formParam("csrfToken", "#{csrfToken}")
-      .formParam("input.account.sortCode", "#{sortCode}")
-      .formParam("input.account.accountNumber", "71201948")
-      .formParam("input.subject.name", "Fred Jones")
-      .formParam("input.account.accountType", "personal")
+      .formParam("csrfToken", StringBody("#{csrfToken}"))
+      .formParam("input.account.sortCode", StringBody("#{sortCode}"))
+      .formParam("input.account.accountNumber", StringBody("71201948"))
+      .formParam("input.subject.name", StringBody("Fred Jones"))
+      .formParam("input.account.accountType", StringBody("personal"))
       .check(status.is(200))
       .check(substring("#{sortCode}"))
       .check(substring("71201948"))
