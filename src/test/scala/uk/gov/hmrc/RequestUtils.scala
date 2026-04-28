@@ -40,7 +40,7 @@ object RequestUtils {
       .replace("?", "\\?")
 
   def redirectLocation(expectedRedirectLocationsRegex: String*) =
-    headerRegex("Location", expectedRedirectLocationsRegex.mkString("|"))
+    headerRegex(StringBody("Location"), StringBody(expectedRedirectLocationsRegex.mkString("|")))
 
   def extractParam(session: Session, key: String)(queryParam: String): String =
     extractParams(session(key).as[String]).getOrElse(queryParam, sys.error("error"))
